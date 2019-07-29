@@ -1,0 +1,159 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "aa67f50b-e51c-496c-8e05-ab55e3b057ff": {
+        "id": "aa67f50b-e51c-496c-8e05-ab55e3b057ff",
+        "parent": null,
+        "name": "hiru290719_pythonimporttest",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "2c9c634e-a017-48ae-99c5-4a7d5c06a8da",
+          "c5e5269c-f916-48db-80a1-d9141d0d4121",
+          "de42202b-901a-44b1-91c4-80f7f8b93d58"
+        ],
+        "isRemovable": false,
+        "filePath": "hiru290719_pythonimporttest"
+      },
+      "2c9c634e-a017-48ae-99c5-4a7d5c06a8da": {
+        "id": "2c9c634e-a017-48ae-99c5-4a7d5c06a8da",
+        "parent": "aa67f50b-e51c-496c-8e05-ab55e3b057ff",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru290719_pythonimporttest/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "c5e5269c-f916-48db-80a1-d9141d0d4121": {
+        "id": "c5e5269c-f916-48db-80a1-d9141d0d4121",
+        "parent": "aa67f50b-e51c-496c-8e05-ab55e3b057ff",
+        "name": "pythontest.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru290719_pythonimporttest/pythontest.py",
+        "code": "import numpy\n\ndef handler(event, context):\n\n    x = numpy.linspace(0, 10, 5000)\n    return {\"message\": str(x) }\n",
+        "config": {
+          "runtime": "python3.6",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1Hirupythontestpathget",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "65b388d0-4c84-4fc1-8017-8212164d5939": {
+            "id": "65b388d0-4c84-4fc1-8017-8212164d5939",
+            "name": "test",
+            "functionId": "c5e5269c-f916-48db-80a1-d9141d0d4121",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      },
+      "de42202b-901a-44b1-91c4-80f7f8b93d58": {
+        "id": "de42202b-901a-44b1-91c4-80f7f8b93d58",
+        "parent": "aa67f50b-e51c-496c-8e05-ab55e3b057ff",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru290719_pythonimporttest/__init__.py",
+        "code": ""
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "aa67f50b-e51c-496c-8e05-ab55e3b057ff",
+    "openFiles": [
+      "2c9c634e-a017-48ae-99c5-4a7d5c06a8da",
+      "c5e5269c-f916-48db-80a1-d9141d0d4121"
+    ],
+    "currentFileId": "c5e5269c-f916-48db-80a1-d9141d0d4121",
+    "resources": {
+      "apigusEast1Hirupythontestpathget": {
+        "name": "apigusEast1Hirupythontestpathget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "Hiru_python",
+          "endpointType": "REGIONAL",
+          "resourceMode": 0,
+          "resourceName": "test/path",
+          "resourcePath": "/test/path",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "Test",
+          "mode": 0
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "c5e5269c-f916-48db-80a1-d9141d0d4121",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/hiru290719_pythonimporttest",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "numpy": {
+          "name": "numpy",
+          "version": "1.14.3",
+          "dev": false,
+          "language": "python"
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "hiru290719_pythonimporttest",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1564388829695
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "hiru290719_pythonimporttest",
+      "url": "https://github.com/HirudineeADRT/hiru290719_pythonimporttest",
+      "branches": []
+    }
+  }
+}
